@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title={tiltedata}>
+<div class="slds-m-around_medium"> 
+{passdata}{nummbers}
+</div>
+    </lightning-card>
+
+    <lightning-card title="">
+
+        <div class="slds-m-around_medium"> 
+       <lightning-carousel disable-auto-scroll>
+        <template for:each={crouseldatas} for:item="item">
+<lightning-carousel-image
+     key={item.header}
+    src = {item.src}
+    header = {item.header}
+    description = {item.description}
+    alternative-text = {item.alternativetext}
+   ></lightning-carousel-image>
+</template>
+        </lightning-carousel>
+         </div>
+    </lightning-card>
+    <div class="slds-m-around_medium"> 
+
+
+    <lightning-card title="parent change reflect to child">
+        <div class="slds-m-around_medium"> 
+   <lightning-progress-bar value={placedata} size="large"></lightning-progress-bar>
+    </div>
+  </lightning-card>
+
+</div>
+</template>

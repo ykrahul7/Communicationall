@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title=" title come from  child parent card">
+<div class="slds-m-around_medium">
+<c-childcomponents passdata="the primitive data come from the parent side" nummbers=5 tiltedata='childtilecomefromparent'> </c-childcomponents>
+</div>
+ </lightning-card>
+
+ <lightning-card title="here the data come as non primitive data">
+    <div class="slds-m-bottom_small">
+        <c-childcomponents crouseldatas={crouseldata}></c-childcomponents>
+    </div>
+</lightning-card> 
+
+
+
+
+<lightning-card title="parent change reflect to childa">
+   <div class="slds-m-bottom_Medium">
+    <lightning-input type="number" label="please fill the precentage" value={precentages} placeholder="input here... " onkeyup ={changehandler}></lightning-input>
+   <c-childcomponents placedata={precentages}></c-childcomponents>
+   </div>
+</lightning-card> 
+
+
+<lightning-card title="Child method called from parent">
+    <div class="slds-m-bottom_Medium">
+    <lightning-button  label="resetbutton" variant="brand"  onclick={handleClick}></lightning-button>
+    <c-childmethodcallfromparent ></c-childmethodcallfromparent>
+    </div>
+ </lightning-card> 
+
+
+
+ 
+</template>

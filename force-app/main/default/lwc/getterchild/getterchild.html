@@ -1,0 +1,20 @@
+<template>
+<lightning-card title="getterChild">
+<div class="slds-var-m_medium">
+<p><strong>name</strong>:{details.name}</p>
+<p><strong>lastname</strong>:{details.lastname}</p>
+<p><strong>city</strong>:{details.city}</p>
+<p><strong>age</strong>:{details.age}</p>
+<p><strong>kuchbhi</strong>:{details.kuchbhi}</p>
+</div>
+
+</lightning-card>
+<lightning-card title="slotexample">
+    <div class="slds-var-m_medium">
+     <p>what is your Name ?</p>
+    <div><slot></slot></div> // unnamed slot tag
+    </div>
+    <p>what is your age ?</p>
+    <div><slot name="second"></slot></div> // named slot tage
+    </lightning-card>
+</template>

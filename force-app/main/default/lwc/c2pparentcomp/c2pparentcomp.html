@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="parent data">
+
+        <template if:true={showmodal}>
+           
+<c-c2pchildcomp onclose={handelers}></c-c2pchildcomp>
+        </template>
+
+ <h1>{msg}</h1>
+    </lightning-card>
+</template>
